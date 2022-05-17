@@ -52,7 +52,7 @@ class OneToOneController extends Controller
         $saveLocation = $location->save();
         */
        
-       $location = $country->location()->create($dataForm);
+       $location = $country->location()->create($dataForm); 
 
     }
 }
