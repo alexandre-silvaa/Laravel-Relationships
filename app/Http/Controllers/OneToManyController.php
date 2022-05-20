@@ -89,4 +89,17 @@ class OneToManyController extends Controller
         $insertState = State::create($dataForm);
         var_dump($insertState->name);
     }
+
+    public function hasManyThrough()
+    {
+        $country = Country::find(1);
+        echo "<b>{$country->name}</b>";
+
+        $cities = $country->cities;
+
+        foreach($cities as $city){
+            echo "</br> {$city->name}";
+        }
+        echo "</br> Total cidades: {$cities->count()}";
+    }
 }
