@@ -34,6 +34,7 @@ Route::get('many-to-many-insert', 'ManyToManyController@manyToManyInsert');
 
 //Relation Polymorphic
 Route::get('polymorphics', 'PolymorphicController@polymorphic');
+Route::get('polymorphics-insert', 'PolymorphicController@polymorphicInsert');
 
 //Default
 Route::get('/', function () {

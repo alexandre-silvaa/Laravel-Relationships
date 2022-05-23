@@ -23,4 +23,9 @@ class Country extends Model
     {
         return $this->hasManyThrough(City::class, State::class);
     }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }
